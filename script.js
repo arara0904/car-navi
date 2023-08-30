@@ -27,6 +27,7 @@ navigator.geolocation.watchPosition(function (position) {
     $('#userWeatherType').html("天候: &nbsp;" + Etemp);
   });
 	  var Speed = position.coords.speed || 0;
+	Speed = Speed * 3.6;
     $('#userSpeed').html("速度: &nbsp;" + Speed.toPrecision(3) + "m/s");
 	
   if (i) {
