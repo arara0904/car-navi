@@ -1,0 +1,27 @@
+*{
+	margin: 0; 
+	padding:0;
+ }
+ul,li{
+	list-style:none
+}
+#mapid{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+	z-index:0;
+}
+
+#menu{
+	  position: fixed;
+	bottom:0vh;
+	left:0vh;
+	z-index:1;
+	background-color: #fff;
+	margin:10px;
+	padding:6px;
+	border-radius: 4px;
+	border: 2px solid rgba(0,0,0,0.2);
+  background-clip: padding-box;
+	font-size:3vh;
+}
