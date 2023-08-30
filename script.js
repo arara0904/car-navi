@@ -28,7 +28,7 @@ navigator.geolocation.watchPosition(function (position) {
   });
 	  var Speed = position.coords.speed || 0;
 	Speed = Speed * 3.6;
-    $('#userSpeed').html("速度: &nbsp;" + Speed.toPrecision(3) + "m/s");
+    $('#userSpeed').html("速度: &nbsp;" + Speed.toPrecision(3) + "km/h");
 	
   if (i) {
     i.setLatLng([position.coords.latitude,position.coords.longitude])
