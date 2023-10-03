@@ -1,3 +1,8 @@
+window.addEventListener('load', function(){
+
+  alert('周りに気を付けて走行しましょう');
+
+
 var i;
 var route;
 var map = L.map('mapid', {
@@ -9,10 +14,6 @@ var tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
   attribution: '© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
 });
 tileLayer.addTo(map);
-
-window.addEventListener('load', function(){
-  alert('周りに気を付けて走行しましょう');
-});
 
 navigator.geolocation.watchPosition(function (position) {
   var userLongitude = position.coords.longitude;
@@ -55,4 +56,5 @@ map.on('click', (e)=>{
     ],
     routeWhileDragging: true
   }).addTo(map);
+});
 });
