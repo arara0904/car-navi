@@ -10,8 +10,9 @@ var tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
 });
 tileLayer.addTo(map);
 
-alert('周りに気を付けて走行しましょう');
-
+window.addEventListener('load', function(){
+  alert('周りに気を付けて走行しましょう');
+});
 
 navigator.geolocation.watchPosition(function (position) {
   var userLongitude = position.coords.longitude;
