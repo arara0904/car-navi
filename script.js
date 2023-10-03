@@ -47,6 +47,7 @@ map.on('click', (e)=>{
     map.removeControl(route);
   }
   route = L.Routing.control({
+    language: 'ja',
     waypoints: [
       L.latLng(i._latlng.lat, i._latlng.lng),
       L.latLng(e.latlng.lat, e.latlng.lng)
