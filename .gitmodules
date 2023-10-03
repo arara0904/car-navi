@@ -1,0 +1,3 @@
+[submodule "map-samples"]
+	path = map-samples
+	url = https://github.com/charilab/map-samples.git
