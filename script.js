@@ -1,7 +1,4 @@
-window.addEventListener('load', function(){
-
-  alert('周りに気を付けて走行しましょう');
-
+alert('周りに気を付けて走行しましょう');
 
 var i;
 var route;
@@ -56,5 +53,4 @@ map.on('click', (e)=>{
     ],
     routeWhileDragging: true
   }).addTo(map);
-});
 });
