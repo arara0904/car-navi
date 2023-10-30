@@ -1,5 +1,11 @@
 alert('周りに気を付けて走行しましょう');
 if (!navigator.geolocation) {alert('このブラウザはgeolocationapiをサポートしていません');}
+
+
+if(!navigator.geolocation.watchPosition(function (position) {return position})){console.log("not found")}else{console.log("found")}
+
+
+
 var i;
 var route;
 var map = L.map('mapid', {
@@ -12,7 +18,9 @@ var tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
 });
 tileLayer.addTo(map);
 
-navigator.geolocation.watchPosition(function (position) {
+
+var getGeo = ()=>{
+	navigator.geolocation.watchPosition(function (position) {
   var userLongitude = position.coords.longitude;
   var userLatitude = userLatitude = position.coords.latitude;
   var api = "https://api.openweathermap.org/data/2.5/weather?lat=" + userLatitude + "&lon=" + userLongitude + "&lang=ja&appid=42f4c0d0751aec9a6be5fd8050304213";
@@ -35,6 +43,8 @@ navigator.geolocation.watchPosition(function (position) {
   i = L.marker([position.coords.latitude,position.coords.longitude]).addTo(map).bindPopup("現在地");	map.setView([position.coords.latitude,position.coords.longitude],17);
 	}
 });
+}
+
 
 map.on('locationerror', ()=>{
 	alert(e.message);
