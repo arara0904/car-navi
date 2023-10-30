@@ -1,7 +1,7 @@
 alert('周りに気を付けて走行しましょう');
-
-var watch = navigator.geolocation.watchPosition(function (position) {return position});
-if(!watch){alert("not found")}else{alert("found")}
+var pos;
+var watch = navigator.geolocation.watchPosition(function (position) {pos = position});
+if(!watch){alert("not found")}else{alert(pos)}
 navigator.geolocation.clearWatch(watch);
 
 
