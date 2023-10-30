@@ -5,7 +5,6 @@ if(!watch){alert("not found")}else{alert("found")}
 navigator.geolocation.clearWatch(watch);
 
 
-
 var i;
 var route;
 var map = L.map('mapid', {
