@@ -2,7 +2,7 @@ alert('周りに気を付けて走行しましょう');
 if (!navigator.geolocation) {alert('このブラウザはgeolocationapiをサポートしていません');}
 
 var watch = navigator.geolocation.watchPosition(function (position) {return position});
-if(!watch){console.log("not found")}else{console.log("found")}
+if(!watch){alert("not found")}else{alert("found")}
 navigator.geolocation.clearWatch(watch);
 
 
@@ -46,6 +46,7 @@ var getGeo = ()=>{
 });
 }
 
+getGeo();
 
 map.on('locationerror', ()=>{
 	alert(e.message);
