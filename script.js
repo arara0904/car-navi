@@ -44,7 +44,6 @@ var getGeo = ()=>{
 });
 }
 
-getGeo();
 
 map.on('locationerror', ()=>{
 	alert(e.message);
