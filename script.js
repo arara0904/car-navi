@@ -1,5 +1,5 @@
 alert('周りに気を付けて走行しましょう');
-
+if (!navigator.geolocation) {alert('このブラウザはgeolocationapiをサポートしていません');}
 var i;
 var route;
 var map = L.map('mapid', {
