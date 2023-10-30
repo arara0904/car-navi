@@ -1,8 +1,9 @@
 alert('周りに気を付けて走行しましょう');
 if (!navigator.geolocation) {alert('このブラウザはgeolocationapiをサポートしていません');}
 
-
-if(!navigator.geolocation.watchPosition(function (position) {return position})){console.log("not found")}else{console.log("found")}
+var watch = navigator.geolocation.watchPosition(function (position) {return position});
+if(!watch){console.log("not found")}else{console.log("found")}
+navigator.geolocation.clearWatch(watch);
 
 
 
